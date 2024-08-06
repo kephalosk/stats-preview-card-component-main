@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <head>
+        <meta charset="UTF-8">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+        <link rel="icon" type="image/png" size="32x32" href="images/favicon-32x32.png">
 
-  Get insights that help your business grow.
+        <title>kephalosk | Stats preview card component</title>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
 
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cardBox">
+            <section class="cardBoxContent">
+                <header>
+                    <h1>Get <span class="headingMark">insights</span> that help your business grow.</h1>
+                    <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+                        experience, and overall efficiency.</p>
+                </header>
+                <div class="statisticRow">
+                    <div class="statisticRowCompanies">
+                        <div class="statisticRowCompaniesValue">
+                            <label>10k+</label>
+                        </div>
+                        <label class="statisticRowCompaniesName">companies</label>
+                    </div>
+                    <div class="statisticRowTemplates">
+                        <div class="statisticRowTemplatesValue">
+                            <label>314</label>
+                        </div>
+                        <label class="statisticRowTemplatesName">templates</label>
+                    </div>
+                    <div class="statisticRowQueries">
+                        <div class="statisticRowQueriesValue">
+                            <label>12m+</label>
+                        </div>
+                        <label class="statisticRowQueriesName">queries</label>
+                    </div>
+                </div>
+            </section>
+            <img class="cardBoxImage" src="image-header-desktop" alt="image of an office">
+        </div>
+        <footer class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">kephalosk</a>.
+        </footer>
+    </body>
 </html>
