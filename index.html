@@ -29,6 +29,10 @@
                 justify-content: center;
                 grid-template-rows: 1fr auto;
                 height: 100%;
+
+                @media (max-width: 480px) {
+                    order: 2;
+                }
             }
 
             .cardBoxImage {
@@ -37,6 +41,11 @@
                 flex-direction: row;
                 justify-content: flex-end;
                 position: relative;
+
+                @media (max-width: 480px) {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                }
             }
 
             .headerContainer {
@@ -60,9 +69,23 @@
                 width: 100%;
             }
 
+            .statisticRowContentElement {
+                @media (max-width: 480px) {
+                    align-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+
             .statisticRow {
                 display: flex;
-                align-items: flex-end;´
+                align-items: flex-end;
+
+                @media (max-width: 480px) {
+                    align-items: center;
+                    justify-content: center;
+                }
             }
 
             .statisticRowContent {
@@ -70,6 +93,12 @@
                 grid-template-columns: 1fr 1fr 1fr;
                 margin: 0 11vw 4vw 5vw;
                 width: 100%;
+
+                @media (max-width: 480px) {
+                    align-items: center;
+                    justify-content: center;
+                    grid-template-columns: 1fr;
+                }
             }
 
             .statisticRowValue {
@@ -81,8 +110,12 @@
                     font-size: 16px;
                 }
 
-                @media (max-width: 650px) {
+                @media (min-width: 481px) and (max-width: 650px) {
                     font-size: 12px;
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 30px;
                 }
             }
 
@@ -96,6 +129,11 @@
                 margin: 180px 0;
                 max-width: 1110px;
                 width: 100%;
+
+                @media (max-width: 480px) {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                }
             }
 
             body {
@@ -105,6 +143,7 @@
                 flex-direction: column;
                 font-family: Inter,sans-serif;
                 justify-content: center;
+                margin: 24px;
             }
 
             h1 {
@@ -116,8 +155,13 @@
                     font-size: 24px;
                 }
 
-                @media (max-width: 650px) {
+                @media (min-width: 481px) and (max-width: 650px) {
                     font-size: 14px;
+                }
+
+                @media (max-width: 480px) {
+                    margin: 30px 0 20px 0;
+                    text-align: center;
                 }
             }
 
@@ -133,8 +177,15 @@
                     font-size: 9px;
                 }
 
-                @media (max-width: 650px) {
+                @media (min-width: 481px) and (max-width: 650px) {
                     font-size: 7px;
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                    margin-top: 8px;
+                    text-align: center;
                 }
             }
 
@@ -148,6 +199,10 @@
             img {
                 border-radius: 0 8px 8px 0;
                 width: 100%;
+
+                @media (max-width: 480px) {
+                    border-radius: 8px 8px 0 0;
+                }
             }
 
             p {
@@ -160,8 +215,14 @@
                     font-size: 12px;
                 }
 
-                @media (max-width: 650px) {
+                @media (min-width: 481px) and (max-width: 650px) {
                     font-size: 9px;
+                }
+
+                @media (max-width: 480px) {
+                    line-height: 175%;
+                    text-align: center;
+                    margin-bottom: 30px;
                 }
             }
         </style>
@@ -169,7 +230,7 @@
     <body>
         <div id="cardBox">
             <section class="cardBoxContent">
-                <div class ="headerContainer">
+                <div class="headerContainer">
                     <header>
                         <h1>Get <span class="headingMark">insights</span> that help your business grow.</h1>
                         <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
@@ -178,15 +239,15 @@
                 </div>
                 <div class="statisticRow">
                     <div class="statisticRowContent">
-                        <div class="statisticRowCompanies">
+                        <div class="statisticRowContentElement">
                             <label class="statisticRowValue">10k+</label>
                             <h2>companies</h2>
                         </div>
-                        <div class="statisticRowTemplates">
+                        <div class="statisticRowContentElement">
                             <label class="statisticRowValue">314</label>
                             <h2>templates</h2>
                         </div>
-                        <div class="statisticRowQueries">
+                        <div class="statisticRowContentElement">
                             <label class="statisticRowValue">12m+</label>
                             <h2>queries</h2>
                         </div>
