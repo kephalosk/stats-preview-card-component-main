@@ -7,10 +7,14 @@
 
         <link rel="icon" type="image/png" size="32x32" href="images/favicon-32x32.png">
 
+        <link rel="staylesheet" href="https://fonts.google.com/specimen/Inter">
+        <link rel="staylesheet" href="https://fonts.google.com/specimen/Lexend+Deca">
+
         <title>kephalosk | Stats preview card component</title>
 
         <style>
             .attribution {
+                color: hsl(0, 0%, 100%);
                 font-size: 11px;
                 text-align: center;
             }
@@ -18,38 +22,148 @@
             .attribution a {
                 color: hsl(228, 45%, 44%);
             }
+
+            .cardBoxContent {
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                grid-template-rows: 1fr auto;
+                height: 100%;
+            }
+
+            .cardBoxImage {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                position: relative;
+            }
+
+            .headerContainer {
+                align-self: start;
+            }
+
+            .headingMark {
+                color: hsl(277, 64%, 61%);
+            }
+
+            .overlay {
+                align-items: center;
+                background: hsl(277, 64%, 61%, 0.5);
+                color: hsl(0, 0%, 100%);
+                border-radius: 0 10px 10px 0;
+                bottom: 0;
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+            }
+
+            .statisticRow {
+                display: flex;
+                align-items: flex-end;´
+            }
+
+            .statisticRowContent {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin: 0 100px 60px 70px;
+                width: 100%;
+            }
+
+            .statisticRowValue {
+                color: hsl(0, 0%, 100%);
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            #cardBox {
+                align-items: center;
+                background-color: hsl(244, 38%, 16%);
+                border-radius: 8px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                margin: 180px 0;
+                max-width: 1110px;
+                width: 100%;
+            }
+
+            body {
+                align-items: center;
+                background-color: hsl(233, 47%, 7%);
+                display: flex;
+                flex-direction: column;
+                font-family: Inter,sans-serif;
+                justify-content: center;
+            }
+
+            h1 {
+                color: hsl(0, 0%, 100%);
+                font-size: 32px;
+            }
+
+            h2 {
+                color: hsla(0, 0%, 100%, 0.6);
+                font-family: "Lexend Deca",sans-serif;
+                font-size: 12px;
+                font-weight: normal;
+                margin: 8px 0 0 0;
+                text-transform: uppercase;
+            }
+
+            header {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin: 50px 120px 0 70px;
+            }
+
+            img {
+                border-radius: 0 8px 8px 0;
+                width: 100%;
+            }
+
+            p {
+                color: hsla(0, 0%, 100%, 0.75);
+                font-size: 15px;
+                line-height: 150%;
+                margin: 0;
+            }
         </style>
     </head>
     <body>
         <div id="cardBox">
             <section class="cardBoxContent">
-                <header>
-                    <h1>Get <span class="headingMark">insights</span> that help your business grow.</h1>
-                    <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
-                        experience, and overall efficiency.</p>
-                </header>
+                <div class ="headerContainer">
+                    <header>
+                        <h1>Get <span class="headingMark">insights</span> that help your business grow.</h1>
+                        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer
+                            experience, and overall efficiency.</p>
+                    </header>
+                </div>
                 <div class="statisticRow">
-                    <div class="statisticRowCompanies">
-                        <div class="statisticRowCompaniesValue">
-                            <label>10k+</label>
+                    <div class="statisticRowContent">
+                        <div class="statisticRowCompanies">
+                            <label class="statisticRowValue">10k+</label>
+                            <h2>companies</h2>
                         </div>
-                        <label class="statisticRowCompaniesName">companies</label>
-                    </div>
-                    <div class="statisticRowTemplates">
-                        <div class="statisticRowTemplatesValue">
-                            <label>314</label>
+                        <div class="statisticRowTemplates">
+                            <label class="statisticRowValue">314</label>
+                            <h2>templates</h2>
                         </div>
-                        <label class="statisticRowTemplatesName">templates</label>
-                    </div>
-                    <div class="statisticRowQueries">
-                        <div class="statisticRowQueriesValue">
-                            <label>12m+</label>
+                        <div class="statisticRowQueries">
+                            <label class="statisticRowValue">12m+</label>
+                            <h2>queries</h2>
                         </div>
-                        <label class="statisticRowQueriesName">queries</label>
                     </div>
                 </div>
             </section>
-            <img class="cardBoxImage" src="image-header-desktop" alt="image of an office">
+            <div class="cardBoxImage">
+                <img src="images/image-header-desktop.jpg" alt="image of an office">
+                <div class="overlay"></div>
+            </div>
         </div>
         <footer class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
