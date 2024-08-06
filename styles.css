@@ -118,6 +118,7 @@
     @media (max-width: 480px) {
         display: grid;
         grid-template-columns: 1fr;
+        margin: 66px 0;
     }
 }
 
