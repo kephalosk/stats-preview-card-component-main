@@ -68,7 +68,7 @@
             .statisticRowContent {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
-                margin: 0 100px 60px 70px;
+                margin: 0 11vw 4vw 5vw;
                 width: 100%;
             }
 
@@ -76,6 +76,14 @@
                 color: hsl(0, 0%, 100%);
                 font-size: 24px;
                 font-weight: bold;
+
+                @media (min-width: 651px) and (max-width: 850px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 650px) {
+                    font-size: 12px;
+                }
             }
 
             #cardBox {
@@ -102,6 +110,15 @@
             h1 {
                 color: hsl(0, 0%, 100%);
                 font-size: 32px;
+                margin: 2vw 0 2vw 0;
+
+                @media (min-width: 651px) and (max-width: 850px) {
+                    font-size: 24px;
+                }
+
+                @media (max-width: 650px) {
+                    font-size: 14px;
+                }
             }
 
             h2 {
@@ -109,15 +126,23 @@
                 font-family: "Lexend Deca",sans-serif;
                 font-size: 12px;
                 font-weight: normal;
-                margin: 8px 0 0 0;
+                margin: 0.5vw 0 0 0;
                 text-transform: uppercase;
+
+                @media (min-width: 651px) and (max-width: 850px) {
+                    font-size: 9px;
+                }
+
+                @media (max-width: 650px) {
+                    font-size: 7px;
+                }
             }
 
             header {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                margin: 50px 120px 0 70px;
+                margin: 3vw 10vw 0 5vw;
             }
 
             img {
@@ -130,6 +155,14 @@
                 font-size: 15px;
                 line-height: 150%;
                 margin: 0;
+
+                @media (min-width: 651px) and (max-width: 850px) {
+                    font-size: 12px;
+                }
+
+                @media (max-width: 650px) {
+                    font-size: 9px;
+                }
             }
         </style>
     </head>
